@@ -1,6 +1,6 @@
 # 🐶 Projeto ONG AmiCão
 
-Site institucional fictício para a "ONG AmiCão", desenvolvido como projeto prático para a disciplina de [Nome da Disciplina].
+Site institucional fictício para a "ONG AmiCão", desenvolvido como projeto prático para a disciplina de Desenvolvimento Front-End para Web.
 
 **Aluno:** Nicollas Gempka Carvalho
 
