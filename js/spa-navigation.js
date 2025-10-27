@@ -23,12 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (newContent) {
                 mainContentArea.innerHTML = newContent.innerHTML;
                 console.log("Conteúdo HTML injetado com sucesso!");
-
                 if (baseUrl === 'projetos.html' && typeof gerarCardsDeProjetos === 'function') {
                     console.log("Chamando gerarCardsDeProjetos() após carregar projetos.html via SPA...");
                     gerarCardsDeProjetos();
+                } 
+                else if (baseUrl === 'cadastro.html' && typeof inicializarValidacaoFormulario === 'function') {
+                    console.log("Chamando inicializarValidacaoFormulario() após carregar cadastro.html via SPA...");
+                    inicializarValidacaoFormulario();
                 }
-
                 if (hash) {
                     setTimeout(() => {
                         const targetElement = document.getElementById(hash.substring(1));
