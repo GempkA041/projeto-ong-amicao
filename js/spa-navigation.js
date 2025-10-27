@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (newContent) {
                 mainContentArea.innerHTML = newContent.innerHTML;
-                console.log("Conteúdo carregado com sucesso!");
+                console.log("Conteúdo HTML injetado com sucesso!");
+
+                if (url === 'projetos.html' && typeof gerarCardsDeProjetos === 'function') {
+                    console.log("Chamando gerarCardsDeProjetos() após carregar projetos.html via SPA...");
+                    gerarCardsDeProjetos();
+                } 
+
             } else {
                 console.error("Não foi possível encontrar 'main .container' no HTML buscado:", url);
                 mainContentArea.innerHTML = "<p>Erro ao carregar o conteúdo.</p>";
