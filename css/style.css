@@ -546,3 +546,15 @@ select:focus {
 
 .col-12 {grid-column: span 12;}
 .col-6 {grid-column: span 12;}
+
+.campo-invalido {
+    border-color: var(--cor-erro);
+    background-color: #F8D7DA;
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: var(--fonte-tam-pp);
+    font-weight: bold;
+    margin-top: var(--espaco-pp);
+}
