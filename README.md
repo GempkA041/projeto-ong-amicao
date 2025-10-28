@@ -1,36 +1,55 @@
 # 🐶 Projeto ONG AmiCão - Trabalho de Faculdade
 
-Site institucional fictício de 3 páginas para a "ONG AmiCão", desenvolvido como projeto prático para a disciplina de Desenvolvimento Front-End para Web. O projeto abrange a criação da estrutura HTML, estilização com CSS3 e implementação de interatividade com JavaScript avançado.
+Site institucional fictício de 3 páginas para a "ONG AmiCão", desenvolvido como projeto prático para a disciplina de Desenvolvimento Front-End para Web. O projeto abrange a criação da estrutura HTML semântica, estilização completa com CSS3 (incluindo responsividade e modo escuro) e implementação de interatividade com JavaScript avançado (validação de formulário, SPA básica e templates).
 
 **Aluno:** Nicollas Gempka Carvalho
 
+**Link do Projeto (GitHub Pages):** [https://gempka041.github.io/projeto-ong-amicao](https://gempka041.github.io/projeto-ong-amicao)
+
 ---
 
-## 🚀 Etapas do Projeto
+## ✨ Funcionalidades Implementadas
 
-Este projeto foi dividido em três entregas principais:
+### 1. Estrutura e Conteúdo (HTML5)
+* **Páginas:** Início (`index.html`), Projetos (`projetos.html`), Cadastro (`cadastro.html`).
+* **Semântica:** Uso correto de tags HTML5 para estrutura e acessibilidade.
+* **Formulário:** Formulário de cadastro completo com tipos de input modernos e validação nativa básica.
+* **Validação W3C:** Código HTML validado.
+* **Favicon:** Ícone personalizado na aba do navegador.
 
-### 1. Estrutura HTML5 Semântica
-* Criação das 3 páginas obrigatórias (`index.html`, `projetos.html`, `cadastro.html`).
-* Utilização de HTML5 semântico (`<header>`, `<main>`, `<footer>`, `<nav>`, `<section>`, etc.).
-* Implementação de formulário complexo com tipos de input HTML5 e validação nativa.
-* Código validado pelo W3C Validator.
+### 2. Estilização e Responsividade (CSS3)
+* **Sistema de Design:** Baseado em Variáveis CSS (`:root`) para fácil manutenção de cores, fontes e espaçamentos.
+* **Layout Responsivo:** Abordagem "Mobile First" com 5 breakpoints (`xs`, `sm`, `md`, `lg`, `xl`) adaptando o layout para diferentes tamanhos de tela.
+* **Grid e Flexbox:** Utilização combinada para estrutura geral, alinhamento de componentes e criação de grids customizados (ex: cards de projeto, layout da página inicial).
+* **Navegação:** Menu principal interativo com submenu dropdown no desktop e menu hambúrguer funcional no mobile.
+* **Componentes:** Estilos consistentes para Cards, Botões (com estados `:hover`, `:focus`, `:active`, `:disabled`), Formulários, Badges/Tags e Alertas de feedback.
+* **Acessibilidade Visual:** Cores com contraste mínimo de 4.5:1 (WCAG AA) e implementação de **Modo Escuro (Dark Mode)** com toggle (botão 🌙/☀️).
 
-### 2. Estilização com CSS3
-* **Sistema de Design:** Variáveis CSS (`:root`) para cores, fontes e espaçamentos.
-* **Layout Responsivo:** Abordagem "Mobile First", CSS Grid e Flexbox.
-* **Breakpoints:** 5 pontos de quebra (`xs`, `sm`, `md`, `lg`, `xl`).
-* **Navegação Sofisticada:** Menu principal com submenu dropdown (desktop) e menu hambúrguer interativo (mobile).
-* **Componentes:** Estilização de Cards, Botões (com estados `:hover`, `:focus`, `:active`, `:disabled`), Formulários, Badges e Alertas.
-* **Favicon:** Adicionado ícone personalizado para a aba do navegador.
+### 3. Interatividade (JavaScript Avançado)
+* **Validação de Formulário:** Validação robusta no lado do cliente (campo a campo no `blur` e validação completa no `submit`) com feedback visual claro para o usuário.
+* **SPA (Single Page Application) Básica:** Sistema de navegação que carrega o conteúdo principal das páginas dinamicamente (usando `fetch` e `innerHTML`) sem recarregar a página, incluindo rolagem suave para âncoras (`#`).
+* **Templates JavaScript:** Geração dinâmica do HTML dos cards de projeto usando Template Literals a partir de um array de dados.
+* **Código Modular:** JavaScript organizado em arquivos por funcionalidade (`validacao-form.js`, `spa-navigation.js`, `project-cards.js`, `theme-toggle.js`).
+* **Persistência:** Preferência de tema (claro/escuro) salva no `localStorage`.
 
-### 3. Interatividade com JavaScript Avançado
-* **Validação de Formulário:** Implementação de validação de consistência dos dados no formulário de cadastro (campo a campo no `blur` e validação final no `submit`), com feedback visual para o usuário.
-* **Manipulação do DOM:**
-    * **SPA (Single Page Application) Básica:** Sistema que intercepta a navegação e carrega o conteúdo principal das páginas dinamicamente usando `fetch` e `innerHTML`, sem recarregar a página inteira (funciona quando hospedado em servidor HTTP/HTTPS, como GitHub Pages).
-    * **Templates JavaScript:** Geração dinâmica do HTML dos cards de projeto usando Template Literals e dados de um array de objetos.
-* **Código Modular:** Organização do código JavaScript em arquivos separados por funcionalidade (`validacao-form.js`, `spa-navigation.js`, `project-cards.js`).
+## ♿ Acessibilidade (WCAG 2.1 Nível AA)
+* **Navegação por Teclado:** Todos os elementos interativos são acessíveis e focáveis via teclado, com indicadores de foco visíveis.
+* **Contraste:** As combinações de cores atendem aos requisitos mínimos de contraste.
+* **Semântica:** HTML estruturado semanticamente para auxiliar leitores de tela.
+* **Modo Escuro:** Oferece uma alternativa visual para usuários que preferem ou necessitam.
+
+## ⚡ Otimização para Produção
+* **Minificação:** Os arquivos CSS e JavaScript foram minificados para reduzir o tempo de carregamento.
+* **Compressão de Imagens:** As imagens foram otimizadas para diminuir o tamanho dos arquivos (ex: usando TinyPNG).
 
 ## 📂 Estrutura Final do Projeto
+/ ├── index.html ├── projetos.html ├── cadastro.html ├── css/ │ └── style.css (Versão minificada) ├── js/ │ ├── validacao-form.js (Versão minificada) │ ├── spa-navigation.js (Versão minificada) │ ├── project-cards.js (Versão minificada) │ └── theme-toggle.js (Versão minificada) ├── img/ │ └── (Imagens otimizadas) ├── favicon.png └── README.md
 
-/ ├── index.html ├── projetos.html ├── cadastro.html ├── css/ │ └── style.css ├── js/ │ ├── validacao-form.js │ ├── spa-navigation.js │ └── project-cards.js ├── img/ │ └── (imagens do projeto) ├── favicon.png └── README.md
+## 🚀 Como Executar/Visualizar
+
+1.  **GitHub Pages (Recomendado):** Acesse o link: [https://gempka041.github.io/projeto-ong-amicao](https://gempka041.github.io/projeto-ong-amicao)
+2.  **Localmente (com Servidor):** Para que a funcionalidade SPA (`fetch`) funcione corretamente, abra o `index.html` através de um servidor local (ex: usando a extensão "Live Server" no VS Code). Abrir o `file:///` diretamente no navegador bloqueará o carregamento dinâmico de conteúdo devido à política CORS.
+
+---
+
+**Observação:** Este `README.md` detalha as funcionalidades implementadas conforme os requisitos de cada etapa do projeto.
