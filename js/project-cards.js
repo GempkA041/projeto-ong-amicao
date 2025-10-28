@@ -1,78 +1,9 @@
-function gerarCardsDeProjetos() {
-    console.log("Função gerarCardsDeProjetos foi chamada!");
-
-    const projetos = [
-        {
-            id: "voluntariado",
-            titulo: "Seja um Voluntário",
-            imagem: "img/voluntario-brincando.png", 
-            altImagem: "Voluntário brincando com um cachorro resgatado",
-            descricao: "O voluntariado é a alma da nossa ONG. Precisamos de ajuda em diversas frentes:",
-            itensLista: [
-                "Passear e socializar com os cães.",
-                "Ajudar na limpeza e organização do abrigo.",
-                "Ser lar temporário para animais em recuperação.",
-                "Ajudar em feiras de adoção."
-            ],
-            linkBotao: "cadastro.html",
-            textoBotao: "Quero ser voluntário"
-        },
-        {
-            id: "doacao",
-            titulo: "Como Doar",
-            imagem: null, 
-            altImagem: "",
-            descricao: "Manter o abrigo tem um custo alto. Sua doação é fundamental para comprarmos ração, medicamentos e pagarmos custos veterinários. Formas de doar:",
-            itensLista: [
-                "<strong>PIX (CNPJ):</strong> 12.345.678/0001-99",
-                "<strong>Depósito Bancário</strong> Banco X, Agência 0001, Conta 12345-6",
-                "<strong>Doação de Itens:</strong> Aceitamos ração (fechada), cobertores e medicamentos na nossa sede"
-            ],
-            linkBotao: null, 
-            textoBotao: ""
-        }
-    ];
-    const gridProjetos = document.querySelector('.grid-projetos');
-
-    function criarCardHTML(projeto) {
-        let listaItensHTML = '';
-        if (projeto.itensLista && projeto.itensLista.length > 0) {
-            listaItensHTML = `<ul>${projeto.itensLista.map(item => `<li>${item}</li>`).join('')}</ul>`;
-        }
-        let botaoHTML = '';
-        if (projeto.linkBotao && projeto.textoBotao) {
-            botaoHTML = `<p><a href="${projeto.linkBotao}" class="btn">${projeto.textoBotao}</a></p>`;
-        }
-        let imagemHTML = '';
-        if (projeto.imagem) {
-            imagemHTML = `<img src="${projeto.imagem}" alt="${projeto.altImagem}">`;
-        }
-        return `
-            <article id="${projeto.id}" class="card">
-                <h3>${projeto.titulo}</h3>
-                ${imagemHTML} 
-                <p>${projeto.descricao}</p>
-                ${listaItensHTML}
-                ${botaoHTML}
+function gerarCardsDeProjetos(){console.log("Fun\xe7\xe3o gerarCardsDeProjetos foi chamada!");let a=document.querySelector(".grid-projetos");if(a){let o="";[{id:"voluntariado",titulo:"Seja um Volunt\xe1rio",imagem:"img/voluntario-brincando.png",altImagem:"Volunt\xe1rio brincando com um cachorro resgatado",descricao:"O voluntariado \xe9 a alma da nossa ONG. Precisamos de ajuda em diversas frentes:",itensLista:["Passear e socializar com os c\xe3es.","Ajudar na limpeza e organiza\xe7\xe3o do abrigo.","Ser lar tempor\xe1rio para animais em recupera\xe7\xe3o.","Ajudar em feiras de ado\xe7\xe3o."],linkBotao:"cadastro.html",textoBotao:"Quero ser volunt\xe1rio"},{id:"doacao",titulo:"Como Doar",imagem:null,altImagem:"",descricao:"Manter o abrigo tem um custo alto. Sua doa\xe7\xe3o \xe9 fundamental para comprarmos ra\xe7\xe3o, medicamentos e pagarmos custos veterin\xe1rios. Formas de doar:",itensLista:["<strong>PIX (CNPJ):</strong> 12.345.678/0001-99","<strong>Dep\xf3sito Banc\xe1rio</strong> Banco X, Ag\xeancia 0001, Conta 12345-6","<strong>Doa\xe7\xe3o de Itens:</strong> Aceitamos ra\xe7\xe3o (fechada), cobertores e medicamentos na nossa sede"],linkBotao:null,textoBotao:""}].forEach(a=>{var e;let t,r,i;o+=(t="",(e=a).itensLista&&e.itensLista.length>0&&(t=`<ul>${e.itensLista.map(a=>`<li>${a}</li>`).join("")}</ul>`),r="",e.linkBotao&&e.textoBotao&&(r=`<p><a href="${e.linkBotao}" class="btn">${e.textoBotao}</a></p>`),i="",e.imagem&&(i=`<img src="${e.imagem}" alt="${e.altImagem}">`),`
+            <article id="${e.id}" class="card">
+                <h3>${e.titulo}</h3>
+                ${i} 
+                <p>${e.descricao}</p>
+                ${t}
+                ${r}
             </article>
-        `;
-    }
-
-    if (gridProjetos) {
-        let cardsHTML = ''; 
-        projetos.forEach(projeto => {
-            cardsHTML += criarCardHTML(projeto); 
-        });
-        gridProjetos.innerHTML = cardsHTML; 
-        console.log("Cards gerados via template JS!");
-    } else {
-        console.error("Elemento .grid-projetos não encontrado ao tentar gerar cards!");
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("Project Cards Script Loaded");
-    if (window.location.pathname.includes('projetos.html') && typeof gerarCardsDeProjetos === 'function') {
-         gerarCardsDeProjetos();
-    }
-});
+        `)}),a.innerHTML=o,console.log("Cards gerados via template JS!")}else console.error("Elemento .grid-projetos n\xe3o encontrado ao tentar gerar cards!")}document.addEventListener("DOMContentLoaded",function(){console.log("Project Cards Script Loaded"),window.location.pathname.includes("projetos.html")&&gerarCardsDeProjetos()});
